@@ -26,88 +26,112 @@ local function setup()
   xplr.config.general.panel_ui.default.borders = {}
   xplr.config.general.panel_ui.table.style.bg = { Rgb = { 26, 26, 26 } }
 
-  xplr.config.layouts.builtin.default.Vertical.config.constraints = {
-    { Length = 2 },
-    { Min = 1 },
-    { Length = 2 },
-  }
-  xplr.config.layouts.builtin.default.Vertical.splits = {
-    "SortAndFilter",
-    {
-      Horizontal = {
-        config = {
-          constraints = {
-            { Percentage = 20 },
-            { Percentage = 60 },
-            { Percentage = 20 }
+  xplr.config.layouts.builtin.default = {
+    Vertical = {
+      config = {
+        constraints = {
+          { Length = 2 },
+          { Min = 1 },
+          { Length = 2 },
+        },
+      },
+      splits = {
+        "SortAndFilter",
+        {
+          Horizontal = {
+            config = {
+              constraints = {
+                { Percentage = 20 },
+                { Percentage = 60 },
+                { Percentage = 20 },
+              },
+            },
+            splits={
+              "Selection",
+              "Table",
+              "HelpMenu",
+            }
           }
         },
-        splits={
-          "Selection",
-          "Table",
-          "HelpMenu",
-        }
+        "InputAndLogs",
       }
-    },
-    "InputAndLogs",
+    }
   }
 
-  xplr.config.layouts.builtin.no_help.Vertical.config.constraints = {
-    { Length = 2 },
-    { Min = 1 },
-  }
-  xplr.config.layouts.builtin.no_help.Vertical.splits = {
-    "SortAndFilter",
-    {
-      Horizontal = {
-        config = {
-          constraints = {
-            { Percentage = 80 },
-            { Percentage = 20 },
+  xplr.config.layouts.builtin.no_help = {
+    Vertical = {
+      config = {
+        constraints = {
+          { Length = 2 },
+          { Min = 1 },
+        },
+      },
+      splits = {
+        "SortAndFilter",
+        {
+          Horizontal = {
+            config = {
+              constraints = {
+                { Percentage = 80 },
+                { Percentage = 20 },
+              }
+            },
+            splits={
+              "Table",
+              "Selection"
+            }
           }
         },
-        splits={
-          "Table",
-          "Selection"
-        }
+        "InputAndLogs",
       }
-    },
-    "InputAndLogs",
+    }
   }
 
-  xplr.config.layouts.builtin.no_selection.Vertical.config.constraints = {
-    { Length = 2 },
-    { Min = 1 },
-    { Length = 2 }
-  }
-  xplr.config.layouts.builtin.no_selection.Vertical.splits = {
-    "SortAndFilter",
-    {
-      Horizontal = {
-        config = {
-          constraints = {
-            { Percentage = 80 },
-            { Percentage = 20 }
+  xplr.config.layouts.builtin.no_selection = {
+    Vertical = {
+      config = {
+        constraints = {
+          { Length = 2 },
+          { Min = 1 },
+          { Length = 2 }
+        },
+      },
+      splits = {
+        "SortAndFilter",
+        {
+          Horizontal = {
+            config = {
+              constraints = {
+                { Percentage = 80 },
+                { Percentage = 20 },
+              }
+            },
+            splits = {
+              "Table",
+              "HelpMenu",
+            }
           }
         },
-        splits = {
-          "Table",
-          "HelpMenu"
-        }
+        "InputAndLogs",
       }
-    },
-    "InputAndLogs",
+    }
   }
 
-  xplr.config.layouts.builtin.no_help_no_selection.Vertical.config.constraints = {
-    { Length = 2 },
-    { Min = 1 },
-    { Length = 2 }
-  }
-  xplr.config.layouts.builtin.no_help_no_selection.Vertical.splits = {
-    "SortAndFilter",
-    "Table",
-    "InputAndLogs"
+  xplr.config.layouts.builtin.no_help_no_selection = {
+    Vertical = {
+      config = {
+        constraints = {
+          { Length = 2 },
+          { Min = 1 },
+          { Length = 2 }
+        },
+      },
+      splits = {
+        "SortAndFilter",
+        "Table",
+        "InputAndLogs"
+      }
+    }
   }
 end
 

@@ -1,8 +1,9 @@
+[![theaming.gif](https://s3.gifyu.com/images/theaming.gif)](https://gifyu.com/image/54o0)
+
 Installation
 ------------
 
-
-### Manually
+### Install manually
 
 - Add the following line in `~/.config/xplr/init.lua`
 
