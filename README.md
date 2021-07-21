@@ -23,4 +23,10 @@ Installation
 
   ```lua
   require("material-landscape").setup()
+
+  # Or
+
+  require("material-landscape").setup{
+    keep_default_layout = true
+  }
   ```
